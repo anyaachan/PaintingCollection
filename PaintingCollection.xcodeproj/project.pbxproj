@@ -14,6 +14,9 @@
 		E1A4A139285B6D860049441F /* PaintingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A4A138285B6D860049441F /* PaintingInfo.swift */; };
 		E1A4A13B285DBBCD0049441F /* PaintingInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A4A13A285DBBCD0049441F /* PaintingInfoData.swift */; };
 		E1A4A13D285DFBC30049441F /* objectIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A4A13C285DFBC30049441F /* objectIDs.swift */; };
+		E1A4A140285E290E0049441F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A4A13F285E290E0049441F /* Extensions.swift */; };
+		E1A4A143285F39FF0049441F /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = E1A4A142285F39FF0049441F /* Shimmer */; };
+		E1F95BF928649D3F002280AF /* RemoteImage in Frameworks */ = {isa = PBXBuildFile; productRef = E1F95BF828649D3F002280AF /* RemoteImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,7 @@
 		E1A4A138285B6D860049441F /* PaintingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingInfo.swift; sourceTree = "<group>"; };
 		E1A4A13A285DBBCD0049441F /* PaintingInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingInfoData.swift; sourceTree = "<group>"; };
 		E1A4A13C285DFBC30049441F /* objectIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = objectIDs.swift; sourceTree = "<group>"; };
+		E1A4A13F285E290E0049441F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1F95BF928649D3F002280AF /* RemoteImage in Frameworks */,
+				E1A4A143285F39FF0049441F /* Shimmer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +47,7 @@
 		E1A4A11E285A35200049441F = {
 			isa = PBXGroup;
 			children = (
+				E1A4A13E285E28D80049441F /* Utils */,
 				E1A4A13C285DFBC30049441F /* objectIDs.swift */,
 				E1A4A138285B6D860049441F /* PaintingInfo.swift */,
 				E1A4A13A285DBBCD0049441F /* PaintingInfoData.swift */,
@@ -76,6 +83,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E1A4A13E285E28D80049441F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E1A4A13F285E290E0049441F /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -92,6 +107,10 @@
 			dependencies = (
 			);
 			name = PaintingCollection;
+			packageProductDependencies = (
+				E1A4A142285F39FF0049441F /* Shimmer */,
+				E1F95BF828649D3F002280AF /* RemoteImage */,
+			);
 			productName = PaintingCollection;
 			productReference = E1A4A127285A35200049441F /* PaintingCollection.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +139,10 @@
 				Base,
 			);
 			mainGroup = E1A4A11E285A35200049441F;
+			packageReferences = (
+				E1A4A141285F39FF0049441F /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */,
+				E1F95BF728649D3F002280AF /* XCRemoteSwiftPackageReference "RemoteImage" */,
+			);
 			productRefGroup = E1A4A128285A35200049441F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -147,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1A4A12D285A35200049441F /* ContentView.swift in Sources */,
+				E1A4A140285E290E0049441F /* Extensions.swift in Sources */,
 				E1A4A13B285DBBCD0049441F /* PaintingInfoData.swift in Sources */,
 				E1A4A13D285DFBC30049441F /* objectIDs.swift in Sources */,
 				E1A4A12B285A35200049441F /* PaintingCollectionApp.swift in Sources */,
@@ -351,6 +375,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E1A4A141285F39FF0049441F /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/markiv/SwiftUI-Shimmer";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		E1F95BF728649D3F002280AF /* XCRemoteSwiftPackageReference "RemoteImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/crelies/RemoteImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E1A4A142285F39FF0049441F /* Shimmer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1A4A141285F39FF0049441F /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */;
+			productName = Shimmer;
+		};
+		E1F95BF828649D3F002280AF /* RemoteImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1F95BF728649D3F002280AF /* XCRemoteSwiftPackageReference "RemoteImage" */;
+			productName = RemoteImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E1A4A11F285A35200049441F /* Project object */;
 }

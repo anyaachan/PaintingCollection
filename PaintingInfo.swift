@@ -33,7 +33,6 @@ struct PaintingInfo: Codable {
     let classification, rightsAndReproduction, linkResource, metadataDate: String
     let repository: String
     let objectURL: String
-    let tags: [Tag]
     let objectWikidataURL: String
     let isTimelineWork: Bool
     let galleryNumber: String
@@ -42,7 +41,7 @@ struct PaintingInfo: Codable {
         case objectID, isHighlight, accessionNumber, accessionYear, isPublicDomain, primaryImage, primaryImageSmall, additionalImages, department, objectName, title, culture, period, dynasty, reign, portfolio, artistRole, artistPrefix, artistDisplayName, artistDisplayBio, artistSuffix, artistAlphaSort, artistNationality, artistBeginDate, artistEndDate, artistGender
         case artistWikidataURL = "artistWikidata_URL"
         case artistULANURL = "artistULAN_URL"
-        case objectDate, objectBeginDate, objectEndDate, medium, dimensions, creditLine, geographyType, city, state, county, country, region, subregion, locale, locus, excavation, river, classification, rightsAndReproduction, linkResource, metadataDate, repository, objectURL, tags
+        case objectDate, objectBeginDate, objectEndDate, medium, dimensions, creditLine, geographyType, city, state, county, country, region, subregion, locale, locus, excavation, river, classification, rightsAndReproduction, linkResource, metadataDate, repository, objectURL
         case objectWikidataURL = "objectWikidata_URL"
         case isTimelineWork
         case galleryNumber = "GalleryNumber"
@@ -65,20 +64,3 @@ struct Constituent: Codable {
     }
 }
 
-// MARK: - Measurement
-
-
-// MARK: - ElementMeasurements
-
-// MARK: - Tag
-struct Tag: Codable {
-    let term: String
-    let aatURL: String
-    let wikidataURL: String
-
-    enum CodingKeys: String, CodingKey {
-        case term
-        case aatURL = "AAT_URL"
-        case wikidataURL = "Wikidata_URL"
-    }
-}
